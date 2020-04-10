@@ -23,8 +23,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, BL_INC,  BL_DEC,  RGB_VAI, RGB_VAD, RGB_SPI, RGB_SPD,  KC_BRIU, KC_BRID, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,       
     _______, BL_ON,   BL_OFF,  RGB_HUI, RGB_HUD, RGB_M_P, RGB_M_B,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                     
     _______, XXXXXXX, XXXXXXX, RGB_SAI, RGB_SAD, RGB_M_R, RGB_M_SW, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET, _______,            
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, RGB_MOD, RGB_RMOD, XXXXXXX, MAGIC_HOST_NKRO, MAGIC_UNHOST_NKRO, MAGIC_NO_GUI, MAGIC_UNNO_GUI, XXXXXXX, _______, _______, 
-    _______, _______, _______, KC_SPC,  _______, _______, _______, _______, _______)
- /**[4] = LAYOUT_60_iso_5x1u_split_rshift( 
-   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  ***/
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, RGB_MOD, RGB_RMOD, XXXXXXX, MAGIC_HOST_NKRO, MAGIC_UNHOST_NKRO, MAGIC_NO_GUI, MAGIC_UNNO_GUI, TG(4), _______, _______, 
+    _______, _______, _______, KC_SPC,  _______, _______, _______, _______, _______),
+ [4] = LAYOUT_60_iso_5x1u_split_rshift( 
+   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+   KC_LSFT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_RSFT, _______,
+   _______, XXXXXXX, _______, _______, _______, XXXXXXX, _______, _______, _______)
 };
