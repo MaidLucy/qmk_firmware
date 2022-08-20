@@ -37,7 +37,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
     case 1:
         rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
-        rgblight_setrgb (0xFF, 0x00, 0x1F);
+        rgblight_setrgb (0xFF, 0xFF, 0xFF);
         break;
     case 2:
         rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
@@ -49,7 +49,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
         break;
     case 4:
         rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
-        rgblight_setrgb (0xFF,  0x00, 0x00);
+        rgblight_setrgb (0xFF,  0x10, 0x3F);
         break;
     default: //  for any other layers, or the default layer
         rgblight_reload_from_eeprom();
