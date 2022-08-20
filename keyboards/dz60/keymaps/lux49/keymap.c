@@ -32,3 +32,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_LSFT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_RSFT, _______,
    _______, XXXXXXX, _______, _______, _______, XXXXXXX, _______, _______, _______)
 };
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    switch (get_highest_layer(state)) {
+    case 1:
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+        rgblight_setrgb (0xFF, 0x00, 0x1F);
+        break;
+    case 2:
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+        rgblight_setrgb (0x00,  0xFF, 0x00);
+        break;
+    case 3:
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+        rgblight_setrgb (0x00,  0x00, 0xFF);
+        break;
+    case 4:
+        rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+        rgblight_setrgb (0xFF,  0x00, 0x00);
+        break;
+    default: //  for any other layers, or the default layer
+        rgblight_reload_from_eeprom();
+        break;
+    }
+  return state;
+}
